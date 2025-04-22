@@ -12,8 +12,6 @@ router
     .post(wrapAsync(userController.signup)
 );
 
-
-
 router.route("/login") 
 .get(userController.renderLoginForm)
 .post(

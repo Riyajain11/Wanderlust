@@ -17,7 +17,7 @@ router
         wrapAsync(listingControllers.createListing)
     );
       
-      // Route to show listings by category
+// Category Route
       router.get("/category/:categoryName", async (req, res) => {
         try {
             const { categoryName } = req.params;
@@ -33,8 +33,6 @@ router
         }
     });
     
-      
-      
 // New Route
 router.get("/new", isLoggedIn, wrapAsync(listingControllers.renderNewForm));
 

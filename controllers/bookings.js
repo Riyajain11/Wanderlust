@@ -14,7 +14,7 @@ module.exports.createBooking = async (req, res) => {
         return res.redirect("/listings");
       }
   
-      // Calculate booking details
+    //Booking Details
       const start = new Date(startDate);
       const end = new Date(endDate);
       const nights = Math.ceil((end - start) / (1000 * 60 * 60 * 24));

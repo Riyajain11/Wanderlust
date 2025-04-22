@@ -1,12 +1,10 @@
 <% layout("/layouts/boilerplate") %>
 
-<!-- Include Leaflet CSS -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
 />
 
-<!-- Include Leaflet JS -->
 <script
   src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js">
 </script>
@@ -42,8 +40,7 @@
       </form> 
     </div> 
   <% } %>   
-
-  <!-- Bookings --> 
+<!-- Bookings -->
   <div class="card shadow-sm col-6 offset-3 mt-3"> 
     <div class="booking">
       <h3 class="mt-3">&#8377; <%= listing.price %></h3> 
@@ -124,12 +121,11 @@
     <% } %>
   </div>
 
-  <!-- Map Section -->
+  <!-- Map-->
   <div class="col-8 mb-3 offset-3">
     <h3>Where you'll be</h3> 
     <div id="map" style="width:75% " height: 300px; border-radius: 10px;"></div>
   </div>
 </div>
 
-<!-- Link to your custom map JS -->
 <script src="/js/map.js"></script>

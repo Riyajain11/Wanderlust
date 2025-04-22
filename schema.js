@@ -19,7 +19,6 @@ const reviewSchema = Joi.object({
   }).required(),
 });
 
-// Export both schemas
 module.exports = {
   listingSchema,
   reviewSchema,

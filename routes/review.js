@@ -12,14 +12,12 @@ const {validateReview,
 
 const reviewController= require("../controllers/reviews.js")
 
-// Post Route for Reviews on Listings
 router.post("/", 
     isLoggedIn,
     validateReview, 
     wrapAsync(reviewController.createReview)
 ); 
-
-// Delete review Route 
+ 
 router.delete("/:reviewId",isLoggedIn, 
     isReviewAuthor,
     wrapAsync(reviewController.destroyReview)

@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container my-5">
+  <div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width: 600px;">
+    <div class="card-body p-4">
+      <h2 class="card-title mb-4 text-center booking fw-bold">Booking Confirmed!</h2>
+
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item">
+          <strong>Listing:</strong> <%= booking.listing.title %>
+        </li>
+        <li class="list-group-item">
+          <strong>Booked by:</strong> <%= booking.user.username %>
+        </li>
+        <li class="list-group-item">
+          <strong>Start Date:</strong> <%= booking.startDate.toDateString() %>
+        </li>
+        <li class="list-group-item">
+          <strong>End Date:</strong> <%= booking.endDate.toDateString() %>
+        </li>
+        <li class="list-group-item">
+          <strong>Total Price:</strong> ₹ <%= booking.totalPrice.toLocaleString("en-IN") %>
+        </li>
+      </ul>
+
+      <div class="text-center">
+        <a href="/listings" class="btn-outline-dark rounded-pill px-4">Back to Listings</a>
+      </div>
+    </div>
+  </div>
+</div>
